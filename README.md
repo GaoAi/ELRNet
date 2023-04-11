@@ -32,7 +32,7 @@ conda activate elrnet
 ```
 
 ## Dataset
-You can take the WHU dataset as an example for testing. The download address of WHU is: http://gpcv.whu.edu.cn/data/building_dataset.html 
+You can take the public WHU building extraction dataset as an example for training and testing. 
 ### Directory Structure
 ```
 Directory:
@@ -49,15 +49,19 @@ Directory:
                             | -- test| -- log | -- {model_name} | --datetime | -- history.txt
                                      | -- predict | -- {model_name} | --datetime | -- *.png/tif
 
-The save directory is automatically generated after the model starts training.
 ```
-### Training
-1. set `root_dir` in `./configs/config.cfg`, change the root_path like mentioned above.
-2. set `divice_id` to choose which GPU will be used.
+Note: The save directory is automatically generated after the model starts training.
+
+## Training
+### Configure configs/config.cfg
+1. set `root_dir` to your dataset directory,For example `root_dir = /home/ELRNet/WHU_Building_dataset`
+2. set `nb_classes` to be the number of class in your dataset.
 3. set `epochs` to control the length of the training phase.
-4. setup the `train.py` script as follows:
+4. Start training in two steps：
 ```
-python -m visdom.server -env_path='./visdom_log/' -port=8097 # start visdom server
+（1）start visdom server
+python -m visdom.server -env_path='./visdom_log/' -port=8096（The setting of `port` is in `train.py`）
+（2）start train
 python train.py
 ```
 `-env_path` is where the visdom logfile store in, and `-port` is the port for `visdom`. You could also change the `-port` in `train.py`.

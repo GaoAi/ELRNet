@@ -58,10 +58,12 @@ Note: The save directory is automatically generated after the model starts train
 2. set `nb_classes` to be the number of class in your dataset.
 3. set `epochs` to control the length of the training phase.
 4. Start training in two steps：
+
 （1）start visdom server
 ```
 python -m visdom.server -env_path='./visdom_log/' -port=8096（The setting of `port` is in `train.py`）
 ```
+
 （2）start train
 ```
 python train.py

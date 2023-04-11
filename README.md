@@ -60,15 +60,15 @@ Note: The save directory is automatically generated after the model starts train
 ### Start training
 （1）start visdom server
 ```
-python -m visdom.server -env_path='./visdom_log/' -port=8096（The setting of `port` is in `train.py`）
+python -m visdom.server -env_path='./visdom_log/' -port=8096
 ```
 
 （2）start train
 ```
 python train.py
 ```
-`-env_path` is where the visdom logfile store in, and `-port` is the port for `visdom`. You could also change the `-port` in `train.py`.
+`-env_path` is where the visdom logfile store in, and `-port` is the port for `visdom`. You can also change the `-port` in `train.py`.
 
-
+The change process of model training can be viewed online visdom:http://localhost:8096/
 
 **If my work give you some insights and hints, star me please! Thank you~**

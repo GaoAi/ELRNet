@@ -3,7 +3,7 @@
 Here, we provide the pytorch implementation of the paper: Research on Building Extraction from VHR Remote Sensing
 Imagery Using Efficient Lightweight Residual Network.
 
-![image-20210228153142126](./loss_and_IoU.png)
+![image-20210228153142126](./Architecture.tif)
 
 ### Clone the Repository
 ```

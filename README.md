@@ -70,5 +70,9 @@ python train.py
 `-env_path` is where the visdom logfile store in, and `-port` is the port for `visdom`. You can also change the `-port` in `train.py`.
 
 The change process of model training can be viewed online visdom:http://localhost:8096/
-
+### Predict only
+If you want to generate the current prediction result image during the model training or want to predict the image after the model training, you can set and run `demo.py`. You need to set `-weight` in `demo.py` to the directory where the current weight file is located.
+```
+python demo.py
+```
 **If my work give you some insights and hints, star me please! Thank you~**

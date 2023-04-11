@@ -7,8 +7,6 @@ val_loss_result =[]
 train_IoU_result =[]
 val_IoU_result =[]
 
-
-# v4版本残差块
 json_filename = './v7_eca.json'
 
 # 读取json文件内容,返回字典格式

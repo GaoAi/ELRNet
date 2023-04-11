@@ -7,8 +7,6 @@ val_loss_result =[]
 train_IoU_result =[]
 val_IoU_result =[]
 
-# v3版本残差块
-# json_filename = './my_visdom.json'
 
 # v4版本残差块
 json_filename = './v7_eca.json'

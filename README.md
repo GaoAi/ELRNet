@@ -5,12 +5,12 @@ Imagery Using Efficient Lightweight Residual Network.
 
 ![image-20210228153142126](./Architecture.tif)
 
-### Clone the Repository
+## Installation
+
+Clone this Repository
 ```
-git clone https://github.com/mrluin/ESFNet-Pytorch.git
-```
-```
-cd ./ESFNet-Pytorch
+git clone https://github.com/GaoAi/ELRNet.git
+cd ./ELRNet
 ```
 
 

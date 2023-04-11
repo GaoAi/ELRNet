@@ -53,12 +53,11 @@ Directory:
 Note: The save directory is automatically generated after the model starts training.
 
 ## Training
-### Configure configs/config.cfg
+### Configure config.cfg
 1. set `root_dir` to your dataset directory,For example `root_dir = /home/ELRNet/WHU_Building_dataset`
 2. set `nb_classes` to be the number of class in your dataset.
 3. set `epochs` to control the length of the training phase.
-4. Start training in two steps：
-
+### Start training
 （1）start visdom server
 ```
 python -m visdom.server -env_path='./visdom_log/' -port=8096（The setting of `port` is in `train.py`）

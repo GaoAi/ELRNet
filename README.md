@@ -5,40 +5,51 @@ Imagery Using Efficient Lightweight Residual Network.
 
 ![image-20210228153142126](./Architecture.tif)
 
-## Installation
-
-Clone this Repository
+## Clone this Repository
 ```
 git clone https://github.com/GaoAi/ELRNet.git
 cd ./ELRNet
 ```
 
-
-### Installation using Conda
+## Virtual environment creation (if you need it)
 ```
-conda env create -f environment.yml
-```
-```
-conda activate esfnet
+conda create -n elrnet python==3.8
+conda activate elrnet
 ```
 
-### Sample Dataset
-For training, you can use as an example the [WHU Building Datase](study.rsgis.whu.edu.cn/pages/download/).
+## Installation
+```
+- python
+- pytorch
+- torchvision
+- cudatoolkit
+- cudnn
+- visdom
+- pillow
+- tqdm
+- opencv
+- pandas
+```
 
-You would need to download the cropped aerial images. `The 3rd option`
-
+## Dataset
+You can take the WHU dataset as an example for testing. The download address of WHU is: http://gpcv.whu.edu.cn/data/building_dataset.html 
 ### Directory Structure
 ```
 Directory:
-            #root | -- train 
-                  | -- valid
-                  | -- test
-                  | -- save | -- {model.name} | -- datetime | -- ckpt-epoch{}.pth.format(epoch)
+            #root | -- train | -- image 
+                             | -- label 
+                  | -- val | -- image 
+                           | -- label    
+                  | -- test | -- image 
+                            | -- label
+                  | -- save | -- {model_name} | -- datetime | -- ckpt-epoch{}.pth.format(epoch)
                             |                               | -- best_model.pth
                             |
-                            | -- log | -- {model.name} | -- datetime | -- history.txt
-                            | -- test| -- log | -- {model.name} | --datetime | -- history.txt
-                                     | -- predict | -- {model.name} | --datetime | -- *.png
+                            | -- log | -- {model_name} | -- datetime | -- history.txt
+                            | -- test| -- log | -- {model_name} | --datetime | -- history.txt
+                                     | -- predict | -- {model_name} | --datetime | -- *.png/tif
+
+The save directory is automatically generated after the model starts training.
 ```
 ### Training
 1. set `root_dir` in `./configs/config.cfg`, change the root_path like mentioned above.

@@ -11,7 +11,7 @@ git clone https://github.com/GaoAi/ELRNet.git
 cd ./ELRNet
 ```
 
-## Virtual environment creation (if you need it)
+## Virtual Environment Creation (if you need it)
 ```
 conda create -n elrnet python==3.8
 conda activate elrnet
@@ -33,7 +33,7 @@ conda activate elrnet
 
 ## Dataset
 You can take the public WHU building extraction dataset as an example for training and testing. 
-### Directory Structure
+### Dataset Directory Structure
 ```
 Directory:
             #root | -- train | -- image 
@@ -58,10 +58,12 @@ Note: The save directory is automatically generated after the model starts train
 2. set `nb_classes` to be the number of class in your dataset.
 3. set `epochs` to control the length of the training phase.
 4. Start training in two steps：
-```
 （1）start visdom server
+```
 python -m visdom.server -env_path='./visdom_log/' -port=8096（The setting of `port` is in `train.py`）
+```
 （2）start train
+```
 python train.py
 ```
 `-env_path` is where the visdom logfile store in, and `-port` is the port for `visdom`. You could also change the `-port` in `train.py`.
